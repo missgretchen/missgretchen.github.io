@@ -1,0 +1,12 @@
+[
+    {
+        "title": "Not all artists speak english",
+        "subtitle": "NeurIPS Creativity Workshop 2022",
+        "path": "not-all-artists-speak-english"
+    },
+    {
+        "title": "Bad translations",
+        "subtitle": "Exploring how layering translations impacts the accuracy of translation",
+        "path": "bad-translations"
+    }
+]
