@@ -1,24 +1,73 @@
 import './App.css';
 
 function App() {
-  const projects = [
+  const creativeProjects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution built with React and Node.js, featuring user authentication, payment processing, and inventory management.",
-      technologies: ["React", "Node.js", "MongoDB", "Express", "Stripe"],
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      title: "Digital Art Series",
+      description: "A collection of digital illustrations exploring themes of nature and technology convergence, created using Procreate and Adobe Creative Suite.",
+      medium: "Digital Illustration",
+      tools: ["Procreate", "Adobe Illustrator", "Photoshop"],
+      image: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      year: "2024"
+    },
+    {
+      title: "Brand Identity Design",
+      description: "Complete brand identity system for a sustainable fashion startup, including logo design, color palette, typography, and marketing materials.",
+      medium: "Brand Design",
+      tools: ["Adobe Illustrator", "InDesign", "Figma"],
+      image: "https://images.unsplash.com/photo-1626785774625-0b1c2c4eab67?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      year: "2024"
+    },
+    {
+      title: "UI/UX Design Portfolio",
+      description: "Mobile app interface designs for various projects including a fitness tracking app and a meditation platform, focusing on user-centered design principles.",
+      medium: "UI/UX Design",
+      tools: ["Figma", "Adobe XD", "Sketch", "Principle"],
+      image: "https://images.unsplash.com/photo-1559526324-593bc073d938?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      year: "2023"
+    },
+    {
+      title: "Photography Collection",
+      description: "Documentary photography series capturing urban architecture and street life, with focus on composition and natural lighting techniques.",
+      medium: "Photography",
+      tools: ["Canon EOS R5", "Lightroom", "Photoshop"],
+      image: "https://images.unsplash.com/photo-1452587925148-ce544e77e70d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      year: "2023"
+    }
+  ];
+
+  const technicalProjects = [
+    {
+      title: "Machine Learning Research Project",
+      description: "Research on natural language processing for sentiment analysis in social media data, achieving 94% accuracy using transformer models. Presented at the International Conference on Machine Learning.",
+      technologies: ["Python", "TensorFlow", "BERT", "Pandas", "Jupyter"],
+      image: "https://images.unsplash.com/photo-1555255707-c07966088b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      type: "Academic Research",
+      year: "2024"
+    },
+    {
+      title: "Distributed Systems Architecture",
+      description: "Designed and implemented a scalable microservices architecture for a high-traffic e-commerce platform, handling 100k+ concurrent users with 99.9% uptime.",
+      technologies: ["Node.js", "Docker", "Kubernetes", "Redis", "PostgreSQL"],
+      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      type: "Software Engineering",
+      year: "2024"
     },
     {
       title: "Data Visualization Dashboard",
-      description: "Interactive dashboard for visualizing complex datasets with real-time updates and customizable charts using D3.js and React.",
-      technologies: ["React", "D3.js", "Python", "PostgreSQL", "Chart.js"],
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      description: "Interactive real-time analytics dashboard for IoT sensor data, processing 1M+ data points daily with custom visualization components and predictive analytics.",
+      technologies: ["React", "D3.js", "Python", "FastAPI", "InfluxDB"],
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      type: "Full-Stack Development",
+      year: "2023"
     },
     {
-      title: "Mobile Task Management App",
-      description: "Cross-platform mobile application for task management and team collaboration with offline sync capabilities.",
-      technologies: ["React Native", "Firebase", "Redux", "TypeScript"],
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      title: "Blockchain Smart Contract System",
+      description: "Developed a decentralized voting system using Ethereum smart contracts, ensuring transparency and immutability for academic elections with gas optimization techniques.",
+      technologies: ["Solidity", "Web3.js", "Truffle", "Ganache", "React"],
+      image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      type: "Blockchain Development",
+      year: "2023"
     }
   ];
 
@@ -45,6 +94,10 @@ function App() {
             <div className="hero-buttons">
               <button className="btn-primary">View My Work</button>
               <button className="btn-secondary">Get In Touch</button>
+              <a href="/resume.pdf" download="Gretchen_Eggers_Resume.pdf" className="btn-outline">
+                <span className="material-symbols-rounded">download</span>
+                Download Resume
+              </a>
             </div>
           </div>
           <div className="hero-image">
@@ -110,24 +163,63 @@ function App() {
         </div>
       </section>
 
-      {/* Projects Section */}
-      <section className="projects-section">
+      {/* Creative Projects Section */}
+      <section className="creative-projects-section">
         <div className="container">
-          <h2 className="section-title">Featured Projects</h2>
-          <p className="section-subtitle">Here are some of the projects I've worked on recently</p>
-          <div className="projects-grid">
-            {projects.map((project, index) => (
-              <div key={index} className="project-card">
-                <div className="project-image">
+          <h2 className="section-title">Creative Projects</h2>
+          <p className="section-subtitle">Art, design, and visual storytelling</p>
+          <div className="creative-projects-grid">
+            {creativeProjects.map((project, index) => (
+              <div key={index} className="creative-project-card">
+                <div className="creative-project-image">
                   <img src={project.image} alt={project.title} />
-                  <div className="project-overlay">
-                    <span className="material-symbols-rounded">visibility</span>
+                  <div className="creative-project-overlay">
+                    <span className="material-symbols-rounded">palette</span>
                   </div>
                 </div>
-                <div className="project-content">
-                  <h3 className="project-title">{project.title}</h3>
-                  <p className="project-description">{project.description}</p>
-                  <div className="project-technologies">
+                <div className="creative-project-content">
+                  <div className="creative-project-header">
+                    <h3 className="creative-project-title">{project.title}</h3>
+                    <span className="creative-project-year">{project.year}</span>
+                  </div>
+                  <p className="creative-project-medium">{project.medium}</p>
+                  <p className="creative-project-description">{project.description}</p>
+                  <div className="creative-project-tools">
+                    {project.tools.map((tool, toolIndex) => (
+                      <span key={toolIndex} className="creative-tool-tag">{tool}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Technical Projects Section */}
+      <section className="technical-projects-section">
+        <div className="container">
+          <h2 className="section-title">Technical & Academic Projects</h2>
+          <p className="section-subtitle">Software development, research, and engineering solutions</p>
+          <div className="technical-projects-grid">
+            {technicalProjects.map((project, index) => (
+              <div key={index} className="technical-project-card">
+                <div className="technical-project-image">
+                  <img src={project.image} alt={project.title} />
+                  <div className="technical-project-overlay">
+                    <span className="material-symbols-rounded">code</span>
+                  </div>
+                </div>
+                <div className="technical-project-content">
+                  <div className="technical-project-header">
+                    <h3 className="technical-project-title">{project.title}</h3>
+                    <div className="technical-project-meta">
+                      <span className="technical-project-type">{project.type}</span>
+                      <span className="technical-project-year">{project.year}</span>
+                    </div>
+                  </div>
+                  <p className="technical-project-description">{project.description}</p>
+                  <div className="technical-project-technologies">
                     {project.technologies.map((tech, techIndex) => (
                       <span key={techIndex} className="tech-tag">{tech}</span>
                     ))}
