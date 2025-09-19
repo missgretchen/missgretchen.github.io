@@ -23,7 +23,8 @@
 /* Header */
 .portfolio-header {
   background: #ffffff;
-  border-top: 2px solid #000000;
+  border: 2px solid #000000;
+  border-radius: 12px;
   padding: 20px 40px;
   display: flex;
   justify-content: start;
@@ -236,23 +237,6 @@
   opacity: 1;
 }
 
-
-/* Footer */
-.portfolio-footer {
-  background: #ffffff;
-  padding: 20px 40px;
-  text-align: left;
-  border-top: 2px solid #000000;
-}
-
-.footer-text {
-  font-size: 0.9rem;
-  color: #000000;
-  font-weight: 500;
-  text-transform: lowercase;
-  letter-spacing: 0.05em;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .portfolio-header {
@@ -289,10 +273,6 @@
   
   .social-links {
     justify-content: center;
-  }
-  
-  .portfolio-footer {
-    padding: 15px 20px;
   }
 }
 

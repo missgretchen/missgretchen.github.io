@@ -1,0 +1,111 @@
+.dino-game-container {
+  width: 100%;
+  height: 80px;
+  background: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.dino-game-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: #ffffff;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  touch-action: manipulation;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.dino-game-container:hover {
+  background: #f8f8f8;
+}
+
+/* Game overlay for start/game over messages */
+.game-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 10;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.game-message {
+  text-align: center;
+  font-family: monospace;
+  font-size: 16px;
+  color: #000000;
+  font-weight: bold;
+  line-height: 1.4;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid #000000;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.game-message p {
+  margin: 0;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .dino-game-container {
+    height: 60px;
+  }
+  
+  .dino-game-container:hover {
+    background: #ffffff; /* Disable hover on mobile */
+  }
+  
+  .game-message {
+    font-size: 14px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dino-game-container {
+    height: 50px;
+  }
+  
+  .dino-game-container:hover {
+    background: #ffffff; /* Disable hover on mobile */
+  }
+  
+  .game-message {
+    font-size: 12px;
+    padding: 12px;
+  }
+}
+
+/* Prevent text selection and context menus on mobile */
+@media (hover: none) and (pointer: coarse) {
+  .dino-game-container {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+}

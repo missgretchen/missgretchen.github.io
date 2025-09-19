@@ -4,6 +4,7 @@ import headshot from '../assets/headshot.jpg'
 import resume from '../assets/resume.pdf'
 import { Github, Instagram, Linkedin } from 'lucide-react'
 import Clouds from './Clouds'
+import DinoGame from './DinoGame'
 
 const Portfolio = () => {
   const socialLinks = [
@@ -89,10 +90,8 @@ const Portfolio = () => {
           </section>
         </main>
 
-        {/* Footer */}
-        <footer className="portfolio-footer">
-          <p className="footer-text">copywrite 2025</p>
-        </footer>
+        {/* Dino Game */}
+        <DinoGame />
       </div>
     </div>
   )
