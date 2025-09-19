@@ -22,7 +22,8 @@
 
 /* Header */
 .portfolio-header {
-  background: #1a1a1a;
+  background: #ffffff;
+  border-top: 2px solid #000000;
   padding: 20px 40px;
   display: flex;
   justify-content: start;
@@ -32,36 +33,10 @@
 }
 
 .header-left {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 500;
-  color: #ffffff;
+  color: #1a1a1a;;
   letter-spacing: 0.05em;
-}
-
-.header-nav {
-  display: flex;
-  gap: 40px;
-}
-
-.nav-link {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-.nav-link:hover {
-  color: #ff0040;
-}
-
-.nav-link.active {
-  color: #ff0040;
-  text-decoration: underline;
-  text-decoration-color: #ff0040;
-  text-underline-offset: 4px;
 }
 
 /* Main Content */
@@ -127,11 +102,12 @@
 }
 
 .greeting {
-  font-size: 3rem;
-  font-weight: 300;
+  font-family: 'GameOver';
+  font-size: 8rem;
+  line-height: 4rem;
+  font-weight: normal;
   color: #ff0040;
   margin-bottom: 20px;
-  text-transform: lowercase;
   letter-spacing: 0.05em;
 }
 
@@ -303,7 +279,8 @@
   }
   
   .greeting {
-    font-size: 2.5rem;
+    font-size: 4rem;
+    line-height: 2rem;
   }
   
   .about-text {
@@ -343,10 +320,6 @@
   .profile-image-container {
     width: 200px;
     height: 200px;
-  }
-  
-  .greeting {
-    font-size: 2rem;
   }
   
   .resume-button {
