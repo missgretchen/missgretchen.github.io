@@ -1,6 +1,7 @@
 import React from 'react'
 import './Portfolio.css'
 import headshot from '../assets/headshot.jpg'
+import resume from '../assets/resume.pdf'
 import { Github, Instagram, Linkedin } from 'lucide-react'
 import Clouds from './Clouds'
 
@@ -69,7 +70,7 @@ const Portfolio = () => {
                   )
                 })}
                 <a 
-                  href="../assets/resume.pdf"
+                  href={resume}
                   download="Gretchen_Eggers_Resume.pdf"
                   className="resume-link"
                 >
