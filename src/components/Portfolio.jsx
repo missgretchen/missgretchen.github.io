@@ -1,7 +1,7 @@
 import React from 'react'
 import './Portfolio.css'
 import headshot from '/Headshot.jpg'
-import { Github, Instagram, Linkedin, Download } from 'lucide-react'
+import { Github, Instagram, Linkedin } from 'lucide-react'
 
 const Portfolio = () => {
   const socialLinks = [
@@ -25,14 +25,6 @@ const Portfolio = () => {
     }
   ]
 
-  const handleResumeDownload = () => {
-    const link = document.createElement('a')
-    link.href = '/resume.pdf'
-    link.download = 'Gretchen_Eggers_Resume.pdf'
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
-  }
 
   return (
     <div className="portfolio">
@@ -40,10 +32,6 @@ const Portfolio = () => {
         {/* Header */}
         <header className="portfolio-header">
           <div className="header-left">gretchen eggers</div>
-          <nav className="header-nav">
-            <a href="#about" className="nav-link">about</a>
-            <a href="#projects" className="nav-link active">projects</a>
-          </nav>
         </header>
 
         {/* Main Content */}
@@ -78,15 +66,14 @@ const Portfolio = () => {
                     </a>
                   )
                 })}
+                <a 
+                  href="/resume.pdf"
+                  download="Gretchen_Eggers_Resume.pdf"
+                  className="resume-link"
+                >
+                  you can get my CV here
+                </a>
               </div>
-
-              <button 
-                className="resume-button"
-                onClick={handleResumeDownload}
-              >
-                <span className="button-text">download resume</span>
-                <Download className="button-icon" size={18} />
-              </button>
             </div>
           </section>
 
@@ -114,7 +101,7 @@ const Portfolio = () => {
 
         {/* Footer */}
         <footer className="portfolio-footer">
-          <p className="footer-text">copywrite 2024</p>
+          <p className="footer-text">copywrite 2025</p>
         </footer>
       </div>
     </div>
