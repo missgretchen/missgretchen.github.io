@@ -1,0 +1,46 @@
+/* Cloud Animation Styles */
+.cloud {
+  position: fixed;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 1;
+}
+
+.cloud-layer-1 {
+  animation: driftClouds 35s linear infinite;
+}
+
+.cloud-layer-2 {
+  animation: driftClouds2 40s linear infinite;
+}
+
+.cloud-layer-3 {
+  animation: driftClouds3 45s linear infinite;
+}
+
+@keyframes driftClouds {
+  0% {
+    transform: translateX(-300px);
+  }
+  100% {
+    transform: translateX(calc(100vw + 300px));
+  }
+}
+
+@keyframes driftClouds2 {
+  0% {
+    transform: translateX(-300px);
+  }
+  100% {
+    transform: translateX(calc(100vw + 300px));
+  }
+}
+
+@keyframes driftClouds3 {
+  0% {
+    transform: translateX(-300px);
+  }
+  100% {
+    transform: translateX(calc(100vw + 300px));
+  }
+}

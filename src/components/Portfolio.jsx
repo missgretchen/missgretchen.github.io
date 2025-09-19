@@ -2,6 +2,7 @@ import React from 'react'
 import './Portfolio.css'
 import headshot from '../assets/headshot.jpg'
 import { Github, Instagram, Linkedin } from 'lucide-react'
+import Clouds from './Clouds'
 
 const Portfolio = () => {
   const socialLinks = [
@@ -28,6 +29,7 @@ const Portfolio = () => {
 
   return (
     <div className="portfolio">
+      <Clouds />
       <div className="portfolio-container">
         {/* Header */}
         <header className="portfolio-header">
@@ -74,10 +76,14 @@ const Portfolio = () => {
                   you can get my CV here
                 </a>
               </div>
-              <p className="about-text">
-                I’m an engineer with a passion for merging technology and creativity. I graduated from MIT in 2020, where I studied Computer Science and Brain & Cognitive Sciences. After winning a Fulbright research grant, I moved to Brazil in 2022 to explore AI applications for art.
-                Currently, I work as a full-stack software engineer, though I especially enjoy front-end development and collaborating closely with product design teams. When I'm not coding, you can find me painting, taking photographs, or traveling the world to experience new cultures. I'm fluent in Portuguese, working on my Spanish, and always looking for the next adventure.
-            </p>
+              <div className="about-box">
+                <p className="about-text">
+                  I'm an engineer with a passion for merging technology and creativity. I graduated from MIT in 2020, where I studied Computer Science and Brain & Cognitive Sciences. After winning a Fulbright research grant, I moved to Brazil in 2022 to explore AI applications for art.
+                </p>
+                <p className="about-text">
+                  Currently, I work as a full-stack software engineer, though I especially enjoy front-end development and collaborating closely with product design teams. When I'm not coding, you can find me painting, taking photographs, or traveling the world to experience new cultures. I'm fluent in Portuguese, working on my Spanish, and always looking for the next adventure.
+                </p>
+              </div>
             </div>
           </section>
         </main>

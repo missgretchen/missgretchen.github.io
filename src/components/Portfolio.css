@@ -5,6 +5,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  z-index: 10;
 }
 
 .portfolio-container {
@@ -16,6 +17,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  z-index: 10;
 }
 
 /* Header */
@@ -146,12 +148,24 @@
   font-size: 1.1rem;
   line-height: 1.7;
   margin-bottom: 20px;
-  color: #ffffff;
+  color: #000000;
   text-align: left;
 }
 
 .about-text:last-child {
   margin-bottom: 0;
+}
+
+/* About Me Box */
+.about-box {
+  background: #ffffff;
+  border: 3px solid #000000;
+  border-radius: 12px;
+  padding: 30px;
+  margin: 20px 0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 10;
 }
 
 /* Social Links */
@@ -249,14 +263,15 @@
 
 /* Footer */
 .portfolio-footer {
-  background: #1a1a1a;
+  background: #ffffff;
   padding: 20px 40px;
   text-align: left;
+  border-top: 2px solid #000000;
 }
 
 .footer-text {
   font-size: 0.9rem;
-  color: #ffffff;
+  color: #000000;
   font-weight: 500;
   text-transform: lowercase;
   letter-spacing: 0.05em;
