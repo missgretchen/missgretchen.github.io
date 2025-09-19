@@ -1,6 +1,6 @@
 import React from 'react'
 import './Portfolio.css'
-import headshot from '/Headshot.jpg'
+import headshot from '../assets/headshot.jpg'
 import { Github, Instagram, Linkedin } from 'lucide-react'
 
 const Portfolio = () => {
@@ -67,35 +67,18 @@ const Portfolio = () => {
                   )
                 })}
                 <a 
-                  href="/resume.pdf"
+                  href="../assets/resume.pdf"
                   download="Gretchen_Eggers_Resume.pdf"
                   className="resume-link"
                 >
                   you can get my CV here
                 </a>
               </div>
+              <p className="about-text">
+                I’m an engineer with a passion for merging technology and creativity. I graduated from MIT in 2020, where I studied Computer Science and Brain & Cognitive Sciences. After winning a Fulbright research grant, I moved to Brazil in 2022 to explore AI applications for art.
+                Currently, I work as a full-stack software engineer, though I especially enjoy front-end development and collaborating closely with product design teams. When I'm not coding, you can find me painting, taking photographs, or traveling the world to experience new cultures. I'm fluent in Portuguese, working on my Spanish, and always looking for the next adventure.
+            </p>
             </div>
-          </section>
-
-          {/* About Section */}
-          <section className="about-section">
-            <p className="about-text">
-              I'm a product-minded full-stack software engineer with experience 
-              researching, designing, and building software products end-to-end. 
-              I value code quality, clean design, and creating polished, intentional 
-              products that make a real impact.
-            </p>
-            <p className="about-text">
-              From leading frontend infrastructure improvements to conducting 
-              applied ML research, I thrive on teams that encourage creativity and 
-              technical excellence. I'm passionate about bridging the gap between 
-              innovative design and cutting-edge technology.
-            </p>
-            <p className="about-text">
-              When I'm not coding, you'll find me painting, traveling, or exploring 
-              new languages. I speak English, Portuguese, and Spanish, and I believe 
-              in the power of diverse perspectives to create better solutions.
-            </p>
           </section>
         </main>
 

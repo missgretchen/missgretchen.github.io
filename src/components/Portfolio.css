@@ -68,7 +68,7 @@
   padding: 60px 40px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 32px;
 }
 
 /* Profile Section */
@@ -127,10 +127,10 @@
 .greeting {
   font-size: 3rem;
   font-weight: 300;
-  color: #ffffff;
+  color: #ff0040;
   margin-bottom: 20px;
   text-transform: lowercase;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.05em;
 }
 
 .section-title {
