@@ -5,6 +5,7 @@ import resume from '../assets/resume.pdf'
 import { Github, Instagram, Linkedin } from 'lucide-react'
 import Clouds from './Clouds'
 import DinoGame from './DinoGame'
+import Navigation from './Navigation'
 
 const Portfolio = () => {
   const socialLinks = [
@@ -34,9 +35,7 @@ const Portfolio = () => {
       <Clouds />
       <div className="portfolio-container">
         {/* Header */}
-        <header className="portfolio-header">
-          <div className="header-left">gretchen eggers portfolio</div>
-        </header>
+        <Navigation />
 
         {/* Main Content */}
         <main className="portfolio-main">
