@@ -69,8 +69,8 @@ const Navigation = () => {
                   <Link to="/art/photography" className="dropdown-item" onClick={closeDropdown}>
                     Photography
                   </Link>
-                  <Link to="/art/collabs" className="dropdown-item" onClick={closeDropdown}>
-                    Collaborations
+                  <Link to="/art/murals" className="dropdown-item" onClick={closeDropdown}>
+                    Murals
                   </Link>
                   <Link to="/art/experimental" className="dropdown-item" onClick={closeDropdown}>
                     Experimental

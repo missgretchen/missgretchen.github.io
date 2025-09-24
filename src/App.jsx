@@ -9,7 +9,7 @@ import Art from './pages/Art'
 import Sketches from './pages/art/Sketches'
 import Paintings from './pages/art/Paintings'
 import Photography from './pages/art/Photography'
-import Collabs from './pages/art/Collabs'
+import Murals from './pages/art/Murals'
 import Experimental from './pages/art/Experimental'
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
         <Route path="/art/sketches" element={<Sketches />} />
         <Route path="/art/paintings" element={<Paintings />} />
         <Route path="/art/photography" element={<Photography />} />
-        <Route path="/art/collabs" element={<Collabs />} />
+        <Route path="/art/murals" element={<Murals />} />
         <Route path="/art/experimental" element={<Experimental />} />
       </Routes>
     </div>
