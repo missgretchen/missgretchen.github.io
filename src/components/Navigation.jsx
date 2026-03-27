@@ -3,6 +3,9 @@ import { Link, useLocation } from 'react-router-dom'
 import { ChevronDown } from 'lucide-react'
 import './Navigation.css'
 
+/** Flip to true when Code, Papers, and Creative Writing are ready to publish. */
+const SHOW_EXTENDED_PORTFOLIO = false
+
 const Navigation = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
   const location = useLocation()
@@ -31,43 +34,47 @@ const Navigation = () => {
             onClick={toggleDropdown}
             onMouseEnter={() => setIsDropdownOpen(true)}
           >
-            projects <ChevronDown size={16} className={`dropdown-icon ${isDropdownOpen ? 'rotated' : ''}`} />
+            {SHOW_EXTENDED_PORTFOLIO ? 'projects' : 'art'}{' '}
+            <ChevronDown size={16} className={`dropdown-icon ${isDropdownOpen ? 'rotated' : ''}`} />
           </button>
           
           {isDropdownOpen && (
             <div className="dropdown-menu">
-              <div className="dropdown-section">
-                <h3 className="dropdown-section-title">Code</h3>
-                <Link to="/code" className="dropdown-item" onClick={closeDropdown}>
-                  View Projects
-                </Link>
-              </div>
+              {SHOW_EXTENDED_PORTFOLIO && (
+                <>
+                  <div className="dropdown-section">
+                    <h3 className="dropdown-section-title">Code</h3>
+                    <Link to="/code" className="dropdown-item" onClick={closeDropdown}>
+                      View Projects
+                    </Link>
+                  </div>
+                  
+                  <div className="dropdown-section">
+                    <h3 className="dropdown-section-title">Papers</h3>
+                    <Link to="/papers" className="dropdown-item" onClick={closeDropdown}>
+                      Research Papers
+                    </Link>
+                  </div>
+                  
+                  <div className="dropdown-section">
+                    <h3 className="dropdown-section-title">Creative Writing</h3>
+                    <Link to="/creative-writing" className="dropdown-item" onClick={closeDropdown}>
+                      Articles & Stories
+                    </Link>
+                  </div>
+                </>
+              )}
               
               <div className="dropdown-section">
-                <h3 className="dropdown-section-title">Papers</h3>
-                <Link to="/papers" className="dropdown-item" onClick={closeDropdown}>
-                  Research Papers
-                </Link>
-              </div>
-              
-              <div className="dropdown-section">
-                <h3 className="dropdown-section-title">Creative Writing</h3>
-                <Link to="/creative-writing" className="dropdown-item" onClick={closeDropdown}>
-                  Articles & Stories
-                </Link>
-              </div>
-              
-              <div className="dropdown-section">
-                <h3 className="dropdown-section-title">Art Portfolio</h3>
+                {SHOW_EXTENDED_PORTFOLIO && (
+                  <h3 className="dropdown-section-title">Art Portfolio</h3>
+                )}
                 <div className="dropdown-subsection">
                   <Link to="/art/sketches" className="dropdown-item" onClick={closeDropdown}>
                     Sketches
                   </Link>
                   <Link to="/art/paintings" className="dropdown-item" onClick={closeDropdown}>
                     Paintings
-                  </Link>
-                  <Link to="/art/photography" className="dropdown-item" onClick={closeDropdown}>
-                    Photography
                   </Link>
                   <Link to="/art/murals" className="dropdown-item" onClick={closeDropdown}>
                     Murals

@@ -1,26 +1,24 @@
 import React from 'react'
 import Clouds from '../../components/Clouds'
 import Navigation from '../../components/Navigation'
+import ArtGallery from '../../components/ArtGallery'
 import '../../components/Portfolio.css'
+import { getExperimentalColumns } from '../../utils/experimentalLoader'
 
-const Experimental = () => {
-  return (
-    <div className="portfolio">
-      <Clouds />
-      <div className="portfolio-container">
-        <Navigation />
-        
-        <main className="portfolio-main">
-          <div className="about-box">
-            <h1 className="greeting">Experimental</h1>
-            <p className="about-text">
-              This section will showcase my experimental and mixed-media art projects.
-            </p>
-          </div>
-        </main>
-      </div>
+const Experimental = () => (
+  <div className="portfolio">
+    <Clouds />
+    <div className="portfolio-container">
+      <Navigation />
+
+      <main className="portfolio-main">
+        <ArtGallery
+          columns={getExperimentalColumns()}
+          altPrefix="Experimental work"
+        />
+      </main>
     </div>
-  )
-}
+  </div>
+)
 
 export default Experimental

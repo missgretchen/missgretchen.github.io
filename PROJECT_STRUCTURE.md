@@ -14,7 +14,6 @@ The portfolio website now includes the following routes:
 ### Art Portfolio Subsections
 - `/art/sketches` - Sketches and drawings
 - `/art/paintings` - Paintings and painted works
-- `/art/photography` - Photography portfolio
 - `/art/collabs` - Collaborative art projects
 - `/art/experimental` - Experimental and mixed-media works
 
@@ -32,7 +31,6 @@ The site features a dropdown menu in the header with the following structure:
 - **Art Portfolio**
   - Sketches
   - Paintings
-  - Photography
   - Collaborations
   - Experimental
 
@@ -48,7 +46,6 @@ public/projects/
 └── art/
     ├── sketches/           # Sketch images
     ├── paintings/          # Painting images
-    ├── photography/        # Photography portfolio
     ├── collabs/            # Collaborative project assets
     └── experimental/       # Experimental work assets
 ```

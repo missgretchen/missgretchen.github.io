@@ -1,11 +1,11 @@
-/* Paintings Gallery Styles */
-.paintings-gallery {
+/* Shared styles for all art portfolio grids (paintings, sketches, murals, experimental) */
+.art-gallery {
   column-count: 3;
   column-gap: 30px;
   padding: 0 20px;
 }
 
-.painting-card {
+.art-card {
   cursor: pointer;
   transition: all 0.3s ease;
   border-radius: 16px;
@@ -21,41 +21,39 @@
   width: 100%;
 }
 
-.painting-card:hover {
+.art-card:hover {
   transform: translateY(-8px) rotate(0deg) !important;
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
   background: rgba(255, 255, 255, 0.15);
   border-color: rgba(255, 255, 255, 0.3);
 }
 
-.painting-image-container {
+.art-image-container {
   position: relative;
   width: 100%;
   overflow: hidden;
 }
 
-.painting-image {
+.art-image {
   width: 100%;
   height: auto;
   display: block;
   transition: transform 0.3s ease;
 }
 
-.painting-card:hover .painting-image {
+.art-card:hover .art-image {
   transform: scale(1.05);
 }
 
-/* Add subtle variety to create more dynamic visual interest */
-.painting-card:nth-child(odd) {
+.art-card:nth-child(odd) {
   transform: rotate(0.5deg);
 }
 
-.painting-card:nth-child(even) {
+.art-card:nth-child(even) {
   transform: rotate(-0.3deg);
 }
 
-
-.painting-overlay {
+.art-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -74,11 +72,11 @@
   backdrop-filter: blur(5px);
 }
 
-.painting-card:hover .painting-overlay {
+.art-card:hover .art-overlay {
   opacity: 1;
 }
 
-.view-icon {
+.art-gallery .view-icon {
   font-size: 2rem;
   background: rgba(255, 255, 255, 0.9);
   border-radius: 50%;
@@ -93,7 +91,6 @@
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Modal Styles */
 .image-modal {
   position: fixed;
   top: 0;
@@ -154,24 +151,23 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
-  .paintings-gallery {
+  .art-gallery {
     column-count: 2;
     column-gap: 20px;
     padding: 0 10px;
   }
-  
-  .painting-card {
+
+  .art-card {
     margin-bottom: 20px;
   }
-  
+
   .modal-content {
     max-width: 95vw;
     max-height: 95vh;
     padding: 15px;
   }
-  
+
   .close-button {
     top: 5px;
     right: 10px;
@@ -182,24 +178,23 @@
 }
 
 @media (max-width: 480px) {
-  .paintings-gallery {
+  .art-gallery {
     column-count: 1;
     column-gap: 15px;
     padding: 0 5px;
   }
-  
-  .painting-card {
+
+  .art-card {
     margin-bottom: 15px;
   }
-  
-  .view-icon {
+
+  .art-gallery .view-icon {
     width: 50px;
     height: 50px;
   }
 }
 
-/* Enhanced glassmorphism effects */
-.painting-card::before {
+.art-card::before {
   content: '';
   position: absolute;
   top: 0;
@@ -218,18 +213,17 @@
   pointer-events: none;
 }
 
-.painting-card:hover::before {
+.art-card:hover::before {
   opacity: 1;
 }
 
-/* Loading animation for images */
-.painting-image {
+.art-image {
   background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
   background-size: 200% 100%;
-  animation: loading 1.5s infinite;
+  animation: art-gallery-shimmer 1.5s infinite;
 }
 
-@keyframes loading {
+@keyframes art-gallery-shimmer {
   0% {
     background-position: 200% 0;
   }
@@ -238,7 +232,45 @@
   }
 }
 
-.painting-image[src] {
+.art-image[src] {
   animation: none;
   background: none;
+}
+
+/* Explicit 3 stacks (experimental) — not CSS column-count */
+.art-gallery.art-gallery--columns {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 0 20px;
+  column-count: unset;
+}
+
+.art-gallery__column {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.art-gallery--columns .art-card {
+  display: block;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .art-gallery.art-gallery--columns {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .art-gallery.art-gallery--columns {
+    gap: 15px;
+    padding: 0 5px;
+  }
 }
