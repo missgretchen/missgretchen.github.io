@@ -20,8 +20,3 @@ export const getAllMurals = () => {
     modeselektor2,
   ]
 }
-
-// Helper function to get mural count
-export const getMuralCount = () => {
-  return getAllMurals().length
-}

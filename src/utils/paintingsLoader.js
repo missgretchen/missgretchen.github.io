@@ -26,8 +26,3 @@ export const getAllPaintings = () => {
     blueRoses,
   ]
 }
-
-// Helper function to get painting count
-export const getPaintingCount = () => {
-  return getAllPaintings().length
-}

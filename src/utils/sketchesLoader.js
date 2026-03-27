@@ -22,8 +22,3 @@ export const getAllSketches = () => {
     sketchyHand,
   ]
 }
-
-// Helper function to get sketch count
-export const getSketchCount = () => {
-  return getAllSketches().length
-}
