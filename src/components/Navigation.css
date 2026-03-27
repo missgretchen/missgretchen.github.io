@@ -45,6 +45,18 @@
   position: relative;
 }
 
+/* Invisible hit target between the button and the menu so the pointer never
+   “leaves” the dropdown while crossing the gap (fixes accidental close). */
+.dropdown.dropdown--open::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 14px;
+  z-index: 999;
+}
+
 .dropdown-toggle {
   background: transparent;
   border: 2px solid #000000;
@@ -153,20 +165,27 @@
 @media (max-width: 768px) {
   .portfolio-header {
     padding: 15px 20px;
-    flex-direction: column;
-    gap: 15px;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: flex-start;
+    gap: 12px;
   }
   
   .header-left {
     flex-direction: column;
     align-items: flex-start;
     gap: 4px;
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .header-nav {
+    flex-shrink: 0;
   }
   
   .dropdown-menu {
-    left: 0;
-    right: auto;
+    right: 0;
+    left: auto;
     min-width: 280px;
   }
 }

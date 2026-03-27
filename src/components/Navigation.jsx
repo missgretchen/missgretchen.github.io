@@ -28,7 +28,10 @@ const Navigation = () => {
       </div>
       
       <div className="header-nav">
-        <div className="dropdown" onMouseLeave={closeDropdown}>
+        <div
+          className={`dropdown${isDropdownOpen ? ' dropdown--open' : ''}`}
+          onMouseLeave={closeDropdown}
+        >
           <button 
             className="dropdown-toggle"
             onClick={toggleDropdown}
