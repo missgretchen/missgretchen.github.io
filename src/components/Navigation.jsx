@@ -3,9 +3,6 @@ import { Link, useLocation } from 'react-router-dom'
 import { ChevronDown } from 'lucide-react'
 import './Navigation.css'
 
-/** Flip to true when Code, Papers, and Creative Writing are ready to publish. */
-const SHOW_EXTENDED_PORTFOLIO = false
-
 const Navigation = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
   const location = useLocation()
@@ -37,41 +34,35 @@ const Navigation = () => {
             onClick={toggleDropdown}
             onMouseEnter={() => setIsDropdownOpen(true)}
           >
-            {SHOW_EXTENDED_PORTFOLIO ? 'projects' : 'art'}{' '}
+            projects{' '}
             <ChevronDown size={16} className={`dropdown-icon ${isDropdownOpen ? 'rotated' : ''}`} />
           </button>
           
           {isDropdownOpen && (
             <div className="dropdown-menu">
-              {SHOW_EXTENDED_PORTFOLIO && (
-                <>
-                  <div className="dropdown-section">
-                    <h3 className="dropdown-section-title">Code</h3>
-                    <Link to="/code" className="dropdown-item" onClick={closeDropdown}>
-                      View Projects
-                    </Link>
-                  </div>
-                  
-                  <div className="dropdown-section">
-                    <h3 className="dropdown-section-title">Papers</h3>
-                    <Link to="/papers" className="dropdown-item" onClick={closeDropdown}>
-                      Research Papers
-                    </Link>
-                  </div>
-                  
-                  <div className="dropdown-section">
-                    <h3 className="dropdown-section-title">Creative Writing</h3>
-                    <Link to="/creative-writing" className="dropdown-item" onClick={closeDropdown}>
-                      Articles & Stories
-                    </Link>
-                  </div>
-                </>
-              )}
+              <div className="dropdown-section">
+                <h3 className="dropdown-section-title">Code</h3>
+                <a
+                  href="https://brickophone.com"
+                  target="_blank"
+                  className="dropdown-item" onClick={closeDropdown}>
+                  Brickophone
+                </a>
+              </div>
               
               <div className="dropdown-section">
-                {SHOW_EXTENDED_PORTFOLIO && (
-                  <h3 className="dropdown-section-title">Art Portfolio</h3>
-                )}
+                <h3 className="dropdown-section-title">Research</h3>
+                <a
+                  href="https://neuripscreativityworkshop.github.io/2022/papers/ml4cd2022_paper15.pdf"
+                  target="_blank"
+                  className="dropdown-item"
+                  onClick={closeDropdown}
+                >
+                  Not All Artists Speak English: Generating images with DALL-E 2 <br/> from Portuguese
+                </a>
+              </div>
+              <div className="dropdown-section">
+                <h3 className="dropdown-section-title">Art</h3>
                 <div className="dropdown-subsection">
                   <Link to="/art/sketches" className="dropdown-item" onClick={closeDropdown}>
                     Sketches
