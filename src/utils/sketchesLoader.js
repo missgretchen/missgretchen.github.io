@@ -9,12 +9,14 @@ import greenBuilding from '../assets/projects/sketches/green_building.jpg';
 import pushWall from '../assets/projects/sketches/push_wall.jpeg';
 import sittingWoman from '../assets/projects/sketches/sitting_woman.jpeg';
 import sketchyHand from '../assets/projects/sketches/sketchy_hand.jpg';
+import disaster from '../assets/projects/experimental/disaster.jpg'
 
 // Array of all sketch images - add new imports above and include them here
 export const getAllSketches = () => {
   return [
     brooklyn,
     circles,
+    disaster,
     fungus,
     greenBuilding,
     pushWall,

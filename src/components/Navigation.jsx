@@ -74,7 +74,7 @@ const Navigation = () => {
                     Murals
                   </Link>
                   <Link to="/art/experimental" className="dropdown-item" onClick={closeDropdown}>
-                    Experimental
+                    Video
                   </Link>
                 </div>
               </div>
