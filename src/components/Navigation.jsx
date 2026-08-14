@@ -48,6 +48,12 @@ const Navigation = () => {
                   className="dropdown-item" onClick={closeDropdown}>
                   Brickophone
                 </a>
+                <a
+                  href="https://nycfloodmap.com"
+                  target="_blank"
+                  className="dropdown-item" onClick={closeDropdown}>
+                  NYC Flood Map
+                </a>
               </div>
               
               <div className="dropdown-section">
